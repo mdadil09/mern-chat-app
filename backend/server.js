@@ -1,11 +1,15 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const userRoutes = require("../backend/routes/userRoutes");
 
 const { chats } = require("./data/data");
 const connectDB = require("./config/db");
+const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 
 const app = express();
 dotenv.config();
+
+app.use(express.json());
 
 //Database Connection
 connectDB();
@@ -14,17 +18,10 @@ app.get("/", (req, res) => {
   res.send("api is running");
 });
 
-app.get("/api/chat", (req, res) => {
-  res.send(chats);
-});
+app.use("/api/user", userRoutes);
 
-app.get("/api/chat/:id", (req, res) => {
-  //console.log(req.params.id);
-
-  const singleChat = chats.find((c) => c._id === req.params.id);
-
-  res.send(singleChat);
-});
+app.use(notFound);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
