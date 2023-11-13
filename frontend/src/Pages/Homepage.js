@@ -26,7 +26,7 @@ const Homepage = () => {
         borderWidth="1px"
       >
         <Text fontSize="4xl" fontFamily="work sans" color="black">
-          YusChat
+          Yuchat
         </Text>
       </Box>
       <Box
