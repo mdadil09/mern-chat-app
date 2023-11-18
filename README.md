@@ -38,7 +38,7 @@ https://yuchat.onrender.com/
 
 ![](https://github.com/mdadil09/mern-chat-app/blob/6373ad847b7bb9be904cd8be1d2f12941dfe1c14/screenshots/create-group-chat.png)
 
-### UPDATE GROUP NAME AND/REMOVE USERS
+### UPDATE GROUP NAME AND ADD/REMOVE USERS
 
 ![](https://github.com/mdadil09/mern-chat-app/blob/6373ad847b7bb9be904cd8be1d2f12941dfe1c14/screenshots/group-chat.png)
 
